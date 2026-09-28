@@ -4,6 +4,8 @@
 # Discord Mica
 </div>
 
+> **CaelestiaVOID** — a Liquid Glass theme built on this base, in `caelestiavoid.theme.css`. See below. Discord Mica itself by Coolkie is unchanged.
+
 #### Discord Mica focus on brining Mica material and WinUI 3 standard to Discord. Also keeping Discord aesthetic at the same time. Without fancy animations or overwhelming colorful background. Provide just enough customization.
 
 ## Requirement
@@ -21,11 +23,30 @@
 
 That's it :D
 
+## CaelestiaVOID
+`caelestiavoid.theme.css` is a Liquid Glass theme built on the Discord Mica base. Install it **instead of** `discord-mica.theme.css`, not alongside it. It is a derivative of [Discord Mica](https://github.com/PL7963/Discord-Mica) by Coolkie, which is still provided unmodified as `discord-mica.theme.css`.
+
+The base window panes stay Mica and the glass is layered onto floating and control surfaces — buttons, popouts, context menus, the composer, inputs, reactions and modals. That is deliberate: **Mica is a matte, tinted material with no transmission, so it cannot refract.** Liquid Glass is faked here with `backdrop-filter: blur() saturate()` plus a specular rim highlight, a light-catching sheen, and soft tinted shadows. The large structural panes (sidebar, message list, member list) are intentionally left as plain Mica — blurring them costs a lot of GPU for no visual gain, and matches the Acrylic advice below.
+
+| Variable | Effect |
+| --- | --- |
+| `--lg-blur-max` | Blur radius. Set to `0px` to keep the tint and specular edges but drop the blur entirely. |
+| `--lg-saturation-max` | Saturation boost applied to whatever is behind the glass. |
+| `--lg-brightness-max` | Brightness lift, so glass reads as lit rather than muddy. |
+| `--lg-tint` / `--lg-tint-strong` | Base glass colour, and the heavier tint used where labels sit on the glass. |
+| `--lg-radius` / `-md` / `-lg` / `-pill` | Corner radii for the different surface sizes. |
+| `--lg-shadow` / `-sm` / `-hover` | Soft tinted drop shadows. |
+
+There is also a mock of Discord's markup in `preview.html` — open it directly in a browser to sanity-check the glass without launching Discord. It is a development aid and can be deleted.
+
+The theme is served from the `discord-mica.pages.dev` custom domain, which is independent of the repository name — renaming the repo on GitHub will not break the import URLs.
+
 ## Note
 * You could use any backdrop material, like Acrylic, with a Discord-Mica theme. However, this is not recommended since Acrylic is a transparent material, which blurs the contents behind windows. This can be performance-heavy and cause visibility issues. Acrylic should only be used in small areas.
 * Both Mica and Mica Tabbed are tested recommended.
 * The screenshot I took above is actually Mica tabbed. I did not realize I was using Mica tabbed when I was writing this theme. And I was trying to replicate Mica look. If you want to get a similar appearance you can use the dark-bg values in the comments
 * You may want to add more blur effects with a backdrop filter, but when transparency is enabled, backdrop-filter breaks. I recommend tweaking colors to make elements fit into the wallpaper, instead of using transparent elements without blur.
+* CaelestiaVOID relies on that backdrop filter, so **disable BetterDiscord transparency** if you use it. Vencord users should already have transparency off. The blur is gated behind `@supports`, so on a client where it does not work the glass degrades to a tinted surface with specular edges rather than breaking.
 * **Mica with WinDynamicWallpaper is AWESOME**
 
 ## Customization

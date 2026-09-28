@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="theme-dark">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/src/main.css">
+<link rel="stylesheet" href="/src/caelestiavoid.css">
+<style>
+  /* Stand-in for the Mica backdrop: a wallpaper behind an opaque-ish window. */
+  body {
+    background: #101014;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #mica {
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(1200px 800px at 15% 10%, #2b4a7d 0%, transparent 60%),
+      radial-gradient(1000px 900px at 85% 85%, #7a3b6b 0%, transparent 60%),
+      radial-gradient(900px 700px at 70% 15%, #1f6b63 0%, transparent 55%),
+      linear-gradient(160deg, #1a1a24, #0d0d12);
+  }
+  .appMount__51fd7 {
+    position: relative;
+    width: 1180px; height: 740px;
+    display: grid;
+    grid-template-columns: 240px 1fr 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  }
+  /* Mica is a matte tinted material, not a blur — mimic that with a wash. */
+  .wrapper_ef3116 { background: rgba(20,20,26,.72); }
+
+  .titleBar_dz4017 { display: flex; align-items: center; height: 40px; grid-column: 1/-1; }
+  .title_c38106 { display: flex; gap: 8px; padding-left: 12px; color: #ddd; }
+  .title_c38106 i { width: 12px; height: 12px; border-radius: 50%; background: #555; display: block; }
+
+  .sidebar__5e434 { padding: 8px; }
+  .sidebar__5e434 h3 { font: 600 11px/1.6 system-ui; letter-spacing: .08em; text-transform: uppercase; color: #9aa; margin: 12px 8px 6px; }
+  .channel_f75fb0 { padding: 6px 8px; border-radius: 6px; color: #c9c9d2; font: 500 14px/1.4 system-ui; }
+  .channel_f75fb0.sel { background: var(--background-modifier-selected); }
+
+  .chatContent_f75fb0 { display: flex; flex-direction: column; }
+  .messages { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+  .msg { color: #dcdce4; font: 400 15px/1.5 system-ui; }
+  .msg b { color: #fff; }
+  .msg span { color: #8f8fa0; margin-right: 8px; font-size: 12px; }
+
+  .chat_f75fb0 { padding: 0 16px 16px; }
+  .chatTextArea_f75fb0 { border-radius: 8px; }
+  .chatTextArea_f75fb0 p { color: #8a8a99; font: 400 15px/1.5 system-ui; margin: 0; padding: 12px; }
+
+  .panels__5e434 { border-left: 1px solid rgba(255,255,255,.05); }
+  .panels__5e434 h4 { font: 600 13px/1.6 system-ui; color: #ddd; margin: 8px 12px; }
+
+  /* floating layers */
+  .layer {
+    position: fixed; z-index: 10;
+    color: #e6e6ee; font: 400 14px/1.4 system-ui;
+  }
+  #popout {
+    top: 90px; left: 50%; transform: translateX(-50%);
+    width: 460px; padding: 0;
+  }
+  .header_fed6d3 { padding: 12px 14px; font-weight: 600; border-radius: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .contentWrapper__08434 { padding: 8px; }
+  .row { padding: 8px 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+  .row:hover { background: var(--background-modifier-hover); }
+  .av { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg,#4a6,#36a); flex: none; }
+  .muted { color: #8f8fa0; font-size: 12px; }
+
+  #menu { top: 340px; left: 120px; width: 220px; padding: 6px; }
+  .menu_c1e9c4 { padding: 0; }
+  .button_c1e9c4 { padding: 7px 10px; border-radius: 6px; }
+
+  #tooltip { top: 250px; right: 60px; padding: 6px 10px; font-size: 12px; }
+
+  #actions { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; align-items: center; }
+  .btn { font: 600 14px/1 system-ui; padding: 10px 18px; border: 0; color: var(--accent-font); background: var(--accent); }
+  .btn.sec { color: var(--button-font-color); }
+  .toggle { width: 40px; height: 22px; }
+  .toggle .checked { width: 40px; height: 22px; }
+</style>
+</head>
+<body>
+<div id="mica"></div>
+
+<div class="appMount__51fd7">
+  <div class="titleBar_dz4017"><div class="title_c38106"><i></i><i></i><i></i></div></div>
+
+  <div class="sidebar__5e434 wrapper_ef3116">
+    <h3>Text Channels</h3>
+    <div class="channel_f75fb0">general</div>
+    <div class="channel_f75fb0 sel">caelestiavoid</div>
+    <div class="channel_f75fb0">off-topic</div>
+    <h3>Voice Channels</h3>
+    <div class="channel_f75fb0">Lounge</div>
+  </div>
+
+  <div class="chatContent_f75fb0">
+    <div class="messages">
+      <div class="msg"><b>Coolkie</b><span>12:04</span>just dropped a mica material layer on discord</div>
+      <div class="msg"><b>nightmare</b><span>12:05</span>does mica actually blur anything behind the window</div>
+      <div class="msg"><b>Coolkie</b><span>12:05</span>no — mica is matte and tinted, it can't refract. acrylic can, but it's heavy</div>
+      <div class="msg"><b>nightmare</b><span>12:06</span>so where does the liquid glass go</div>
+      <div class="msg"><b>Coolkie</b><span>12:06</span>on top of it. floating bits only, panes stay matte</div>
+    </div>
+    <div class="chat_f75fb0">
+      <div class="chatTextArea_f75fb0"><p>Message #caelestiavoid</p></div>
+    </div>
+  </div>
+
+  <div class="panels__5e434"><h4>Online — 4</h4></div>
+</div>
+
+<div class="layer" id="popout">
+  <div class="header_fed6d3">Search</div>
+  <div class="contentWrapper__08434">
+    <div class="row"><div class="av"></div><div><div>CaelestiaVOID<span class="muted"> · theme author</span></div><div class="muted">liquid glass on mica</div></div></div>
+    <div class="row"><div class="av"></div><div><div>nightmare<span class="muted"> · you</span></div><div class="muted">wants liquid glass</div></div></div>
+    <div class="row"><div class="av"></div><div><div>Coolkie<span class="muted"> · upstream</span></div><div class="muted">wrote discord mica</div></div></div>
+  </div>
+</div>
+
+<div class="layer" id="menu">
+  <div class="menu_c1e9c4">
+    <div class="button_c1e9c4">Mark as Read</div>
+    <div class="button_c1e9c4">Mute Channel</div>
+    <div class="button_c1e9c4">Notification Settings</div>
+    <div class="button_c1e9c4">Copy Link</div>
+  </div>
+</div>
+
+<div class="layer tooltip__1fcc">Added to favourites</div>
+
+<div id="actions">
+  <button class="btn lookFilled__201d5 colorBrand__201d5">Send</button>
+  <button class="btn sec lookFilled__201d5 colorPrimary__201d5">Secondary</button>
+  <div class="container__3f21e toggle"><div class="checked__3f21e"></div></div>
+</div>
+</body>
+</html>
