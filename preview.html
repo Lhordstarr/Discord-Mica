@@ -5,6 +5,21 @@
 <link rel="stylesheet" href="/src/main.css">
 <link rel="stylesheet" href="/src/caelestiavoid.css">
 <style>
+  /* Mirrors the :root block of caelestiavoid.theme.css, inlined because that
+     file's @imports are remote and would not resolve from a local preview. */
+  :root {
+    --dark-bg: transparent;
+    --dark-flyout: rgba(19, 13, 11, 0.42);
+    --dark-accent: var(--cael-accent-3);
+    --dark-accent-hovered: var(--cael-accent-4);
+    --dark-accent-font-color: var(--cael-text-0);
+    --dark-button: rgba(41, 29, 26, 0.55);
+    --dark-button-border: rgba(132, 113, 108, 0.2);
+    --dark-button-font-color: var(--cael-text-3);
+    --dark-background-accent: rgba(34, 23, 20, 0.9);
+    --dark-status-panel: rgba(19, 13, 11, 0.42);
+  }
+<style>
   /* Stand-in for the Mica backdrop: a wallpaper behind an opaque-ish window. */
   body {
     background: #101014;
@@ -14,10 +29,10 @@
   #mica {
     position: fixed; inset: 0;
     background:
-      radial-gradient(1200px 800px at 15% 10%, #2b4a7d 0%, transparent 60%),
-      radial-gradient(1000px 900px at 85% 85%, #7a3b6b 0%, transparent 60%),
-      radial-gradient(900px 700px at 70% 15%, #1f6b63 0%, transparent 55%),
-      linear-gradient(160deg, #1a1a24, #0d0d12);
+      radial-gradient(1200px 800px at 15% 10%, #4a2a3a 0%, transparent 60%),
+      radial-gradient(1000px 900px at 85% 85%, #5c3320 0%, transparent 60%),
+      radial-gradient(900px 700px at 70% 15%, #2f3a44 0%, transparent 55%),
+      linear-gradient(160deg, #2a1a14, #170f0c);
   }
   .appMount__51fd7 {
     position: relative;
@@ -29,7 +44,7 @@
     box-shadow: 0 30px 80px rgba(0,0,0,.6);
   }
   /* Mica is a matte tinted material, not a blur — mimic that with a wash. */
-  .wrapper_ef3116 { background: rgba(20,20,26,.72); }
+  .wrapper_ef3116 { background: rgba(26, 17, 14, .72); }
 
   .titleBar_dz4017 { display: flex; align-items: center; height: 40px; grid-column: 1/-1; }
   .title_c38106 { display: flex; gap: 8px; padding-left: 12px; color: #ddd; }

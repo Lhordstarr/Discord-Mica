@@ -11,29 +11,33 @@
 @import url("https://discord-mica.pages.dev/src/caelestiavoid.css");
 
 :root {
-  /*Dark mode*/
-  --dark-bg: transparent; /*rgba(240,185,190,0.113); to achieve screenshot looking*/
-  --dark-flyout: rgba(40,40,44,0.35); /*Translucent so the glass layer has something to blur*/
-  --dark-accent: rgb(76, 194, 255);
-  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
-  --dark-accent-font-color: black;
-  --dark-button: rgba(58,58,64,0.55);
-  --dark-button-border: rgba(255,255,255,0.14);
-  --dark-button-font-color: white;
-  --dark-background-accent: rgba(50,50,50,0.9);
-  --dark-status-panel: rgba(40,40,44,0.35);
+  /* These map onto the Caelestia palette defined in src/caelestiavoid.css
+     (--cael-*). Edit the palette there, not here, unless you only want to
+     override one surface. */
 
-  /*Light mode*/
+  /*Dark mode*/
+  --dark-bg: transparent; /*keeps Mica visible; try rgba(56, 28, 18, 0.18) for a warm Caelestia wash*/
+  --dark-flyout: rgba(19, 13, 11, 0.42); /*--cael-bg-3, translucent so the glass has something to blur*/
+  --dark-accent: var(--cael-accent-3);
+  --dark-accent-hovered: var(--cael-accent-4); /*also disabled button*/
+  --dark-accent-font-color: var(--cael-text-0); /*dark brown on the peach accent*/
+  --dark-button: rgba(41, 29, 26, 0.55); /*--cael-bg-2, translucent for glass*/
+  --dark-button-border: rgba(132, 113, 108, 0.2); /*--cael-border*/
+  --dark-button-font-color: var(--cael-text-3);
+  --dark-background-accent: rgba(34, 23, 20, 0.9); /*--cael-bg-4*/
+  --dark-status-panel: rgba(19, 13, 11, 0.42);
+
+  /*Light mode — Caelestia is dark-only, so these are a warm derivation*/
   --light-bg: transparent;
-  --light-flyout: rgba(255,255,255,0.5);
-  --light-accent: rgb(0, 120, 212);
-  --light-accent-hovered: rgb(0, 94, 167); /*also disabled button*/
-  --light-accent-font-color: white;
-  --light-button: rgba(255,255,255,0.5);
-  --light-button-border: rgba(255,255,255,0.6);
-  --light-button-font-color: black;
-  --light-background-accent: rgba(160,160,160,0.9);
-  --light-status-panel: rgba(255,255,255,0.4);
+  --light-flyout: rgba(250, 240, 234, 0.55);
+  --light-accent: #a8503a;
+  --light-accent-hovered: #8a3f2d; /*also disabled button*/
+  --light-accent-font-color: var(--cael-text-1);
+  --light-button: rgba(250, 240, 234, 0.6);
+  --light-button-border: rgba(122, 86, 71, 0.25);
+  --light-button-font-color: #3a2219;
+  --light-background-accent: rgba(240, 226, 218, 0.9);
+  --light-status-panel: rgba(250, 240, 234, 0.5);
 
   /* Liquid Glass */
   --lg-blur-max: 24px; /*Set to 0px to keep the tint + specular edges but drop the blur*/

@@ -28,6 +28,9 @@ That's it :D
 
 The base window panes stay Mica and the glass is layered onto floating and control surfaces — buttons, popouts, context menus, the composer, inputs, reactions and modals. That is deliberate: **Mica is a matte, tinted material with no transmission, so it cannot refract.** Liquid Glass is faked here with `backdrop-filter: blur() saturate()` plus a specular rim highlight, a light-catching sheen, and soft tinted shadows. The large structural panes (sidebar, message list, member list) are intentionally left as plain Mica — blurring them costs a lot of GPU for no visual gain, and matches the Acrylic advice below.
 
+### Palette
+CaelestiaVOID carries the **Caelestia** colour scheme over from the Midnight theme (`caelestia.theme.css`) — warm near-black browns with a peach/rust accent ramp. Midnight's own build is not imported, since it is an opaque theme that would kill the Mica transparency. The palette lives as `--cael-*` variables at the top of `src/caelestiavoid.css`, feeds the glass tokens and Discord's native colour variables, and the theme file's `--dark-*`/`--light-*` variables map onto it. Light mode is a warm-neutral derivation, since Caelestia only defines a dark scheme. The background variables stay transparent so Mica keeps showing — if you want the window itself to carry a warm Caelestia wash, set `--dark-bg` to something like `rgba(56, 28, 18, 0.18)`.
+
 | Variable | Effect |
 | --- | --- |
 | `--lg-blur-max` | Blur radius. Set to `0px` to keep the tint and specular edges but drop the blur entirely. |
