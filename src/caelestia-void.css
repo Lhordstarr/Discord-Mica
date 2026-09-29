@@ -76,27 +76,31 @@
   --lg-saturation: 100%;
   --lg-brightness: 100%;
 
-  /* Glass tint, built from the Caelestia backgrounds. Opaque enough to stay
-     readable on its own, where backdrop-filter is unavailable. */
-  --lg-tint: rgba(41, 29, 26, 0.55);
-  --lg-tint-hover: rgba(48, 35, 31, 0.6);
-  --lg-tint-active: rgba(56, 41, 35, 0.62);
-  --lg-tint-strong: rgba(19, 13, 11, 0.72);
-  --lg-tint-faint: rgba(249, 224, 218, 0.06);
+  /* Glass tint, built from the Caelestia backgrounds. Lightweight alpha
+     channels let the dynamic wallpaper bleed through as a subtle glass accent.
+     Where backdrop-filter is unavailable, these degrade to a soft tinted
+     surface rather than an opaque slab. */
+  --lg-tint: rgba(41, 29, 26, 0.18);
+  --lg-tint-hover: rgba(48, 35, 31, 0.24);
+  --lg-tint-active: rgba(56, 41, 35, 0.28);
+  --lg-tint-strong: rgba(19, 13, 11, 0.38);
+  --lg-tint-faint: rgba(249, 224, 218, 0.04);
 
   /* Specular edge — the "lens" rim that catches light. Warm, not pure white,
-     so it reads as lit Caelestia glass rather than a grey outline. */
-  --lg-edge: rgba(249, 224, 218, 0.14);
-  --lg-edge-strong: rgba(249, 224, 218, 0.26);
-  --lg-specular-top: rgba(253, 235, 228, 0.3);
-  --lg-specular-bottom: rgba(249, 224, 218, 0.06);
-  --lg-sheen: linear-gradient(180deg, rgba(249, 224, 218, 0.12) 0%, rgba(249, 224, 218, 0) 44%, rgba(249, 224, 218, 0.04) 100%);
+     so it reads as lit Caelestia glass rather than a grey outline.
+     Reduced opacity keeps the edge subtle against the wallpaper. */
+  --lg-edge: rgba(249, 224, 218, 0.1);
+  --lg-edge-strong: rgba(249, 224, 218, 0.18);
+  --lg-specular-top: rgba(253, 235, 228, 0.2);
+  --lg-specular-bottom: rgba(249, 224, 218, 0.04);
+  --lg-sheen: linear-gradient(180deg, rgba(249, 224, 218, 0.08) 0%, rgba(249, 224, 218, 0) 44%, rgba(249, 224, 218, 0.03) 100%);
 
-  /* Soft, coloured drop shadow — Liquid Glass shadows are never flat black. */
-  --lg-shadow: 0 12px 32px -12px rgba(20, 8, 5, 0.65), 0 2px 6px -2px rgba(20, 8, 5, 0.45);
-  --lg-shadow-sm: 0 4px 12px -4px rgba(20, 8, 5, 0.5);
-  --lg-shadow-hover: 0 16px 40px -12px rgba(20, 8, 5, 0.7), 0 2px 8px -2px rgba(20, 8, 5, 0.5);
-  --lg-text-shadow: 0 1px 1px rgba(20, 8, 5, 0.45), 0 0 2px rgba(20, 8, 5, 0.25);
+  /* Soft, coloured drop shadow — Liquid Glass shadows are never flat black.
+     Reduced opacity keeps the shadow subtle so it doesn't darken the glass. */
+  --lg-shadow: 0 8px 24px -8px rgba(20, 8, 5, 0.35), 0 2px 4px -2px rgba(20, 8, 5, 0.25);
+  --lg-shadow-sm: 0 3px 8px -3px rgba(20, 8, 5, 0.3);
+  --lg-shadow-hover: 0 12px 32px -8px rgba(20, 8, 5, 0.4), 0 2px 6px -2px rgba(20, 8, 5, 0.3);
+  --lg-text-shadow: 0 1px 1px rgba(20, 8, 5, 0.3), 0 0 2px rgba(20, 8, 5, 0.15);
 
   /* Shape */
   --lg-radius: 12px;
@@ -110,33 +114,33 @@
 
   /* Set to 0px to keep the specular/tint look but drop the blur entirely
      (useful on low-end GPUs, or if BetterDiscord transparency is enabled). */
-  --lg-blur-max: 24px;
-  --lg-saturation-max: 180%;
-  --lg-brightness-max: 115%;
+  --lg-blur-max: 16px;
+  --lg-saturation-max: 140%;
+  --lg-brightness-max: 108%;
 }
 
 /* Caelestia only defines a dark scheme, so light mode is a warm-neutral
    derivation rather than a second full palette — the same browns inverted. */
 .theme-light {
-  --lg-tint: rgba(252, 244, 240, 0.5);
-  --lg-tint-hover: rgba(252, 241, 236, 0.66);
-  --lg-tint-active: rgba(252, 238, 232, 0.74);
-  --lg-tint-strong: rgba(250, 240, 234, 0.76);
-  --lg-tint-faint: rgba(122, 86, 71, 0.1);
+  --lg-tint: rgba(252, 244, 240, 0.22);
+  --lg-tint-hover: rgba(252, 241, 236, 0.28);
+  --lg-tint-active: rgba(252, 238, 232, 0.32);
+  --lg-tint-strong: rgba(250, 240, 234, 0.42);
+  --lg-tint-faint: rgba(122, 86, 71, 0.06);
 
-  --lg-edge: rgba(255, 255, 255, 0.6);
-  --lg-edge-strong: rgba(255, 255, 255, 0.85);
-  --lg-specular-top: rgba(255, 252, 250, 0.9);
-  --lg-specular-bottom: rgba(255, 244, 240, 0.25);
-  --lg-sheen: linear-gradient(180deg, rgba(255, 250, 247, 0.5) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 244, 240, 0.12) 100%);
+  --lg-edge: rgba(255, 255, 255, 0.4);
+  --lg-edge-strong: rgba(255, 255, 255, 0.6);
+  --lg-specular-top: rgba(255, 252, 250, 0.6);
+  --lg-specular-bottom: rgba(255, 244, 240, 0.15);
+  --lg-sheen: linear-gradient(180deg, rgba(255, 250, 247, 0.3) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 244, 240, 0.08) 100%);
 
-  --lg-shadow: 0 12px 32px -12px rgba(74, 41, 30, 0.28), 0 2px 6px -2px rgba(74, 41, 30, 0.12);
-  --lg-shadow-sm: 0 4px 12px -4px rgba(74, 41, 30, 0.2);
-  --lg-shadow-hover: 0 16px 40px -12px rgba(74, 41, 30, 0.32), 0 2px 8px -2px rgba(74, 41, 30, 0.14);
+  --lg-shadow: 0 8px 24px -8px rgba(74, 41, 30, 0.18), 0 2px 4px -2px rgba(74, 41, 30, 0.08);
+  --lg-shadow-sm: 0 3px 8px -3px rgba(74, 41, 30, 0.14);
+  --lg-shadow-hover: 0 12px 32px -8px rgba(74, 41, 30, 0.22), 0 2px 6px -2px rgba(74, 41, 30, 0.1);
   --lg-text-shadow: none;
 
-  --lg-blur-max: 20px;
-  --lg-brightness-max: 105%;
+  --lg-blur-max: 14px;
+  --lg-brightness-max: 103%;
 }
 
 /* ============================================================
@@ -536,11 +540,11 @@ input[class*="input"]:focus,
    ============================================================ */
 
 :root {
-  --lg-focus-ring: rgba(246, 152, 125, 0.4); /* Caelestia --cael-accent-3 */
+  --lg-focus-ring: rgba(246, 152, 125, 0.3); /* Caelestia --cael-accent-3 */
 }
 
 .theme-light {
-  --lg-focus-ring: rgba(168, 80, 58, 0.35);
+  --lg-focus-ring: rgba(168, 80, 58, 0.25);
 }
 
 :focus-visible {
