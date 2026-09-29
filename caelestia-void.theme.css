@@ -1,6 +1,6 @@
 /**
- * @name CaelestiaVOID
- * @author CaelestiaVOID
+ * @name Discord Caelestia Void
+ * @author Discord Caelestia Void
  * @version 1.0
  * @description Liquid Glass for Discord, layered onto Mica. Glass on floating surfaces, matte Mica underneath.
  * @source https://github.com/PL7963/Discord-Mica (based on Discord Mica by Coolkie)
@@ -8,13 +8,13 @@
  */
 
 @import url("https://discord-mica.pages.dev/src/main.css");
-@import url("https://discord-mica.pages.dev/src/caelestiavoid.css");
+@import url("https://discord-mica.pages.dev/src/caelestia-void.css");
 
 :root {
-  /* These map onto the Caelestia palette defined in src/caelestiavoid.css
+  /* These map onto the Caelestia palette defined in src/caelestia-void.css
      (--cael-*). Every var() has a literal fallback, so the theme stays fully
      coloured even if that import 404s (stale host) — only the glass would be
-     missing. Edit the palette in src/caelestiavoid.css, not here. */
+     missing. Edit the palette in src/caelestia-void.css, not here. */
 
   /*Dark mode*/
   --dark-bg: transparent; /*keeps Mica visible; try rgba(56, 28, 18, 0.18) for a warm Caelestia wash*/
