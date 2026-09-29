@@ -24,36 +24,36 @@
 
   /*Dark mode — lightweight tints with alpha channels for liquid glass effect*/
   --dark-bg: transparent; /*keeps Mica visible; try rgba(56, 28, 18, 0.18) for a warm Caelestia wash*/
-  --dark-flyout: rgba(19, 13, 11, 0.22); /*--cael-bg-3, translucent so the glass has something to blur*/
+  --dark-flyout: rgba(19, 13, 11, 0.38); /*--cael-bg-3, translucent so the glass has something to blur*/
   --dark-accent: var(--cael-accent-3, #f6987d);
   --dark-accent-rgb: 246, 152, 125; /*RGB variant for rgba() composition*/
   --dark-accent-hovered: var(--cael-accent-4, #f5896a); /*also disabled button*/
   --dark-accent-font-color: var(--cael-text-0, #613427); /*dark brown on the peach accent*/
-  --dark-button: rgba(41, 29, 26, 0.28); /*--cael-bg-2, translucent for glass*/
+  --dark-button: rgba(41, 29, 26, 0.42); /*--cael-bg-2, translucent for glass*/
   --dark-button-rgb: 41, 29, 26; /*RGB variant for rgba() composition*/
-  --dark-button-border: rgba(132, 113, 108, 0.15); /*--cael-border*/
+  --dark-button-border: rgba(132, 113, 108, 0.2); /*--cael-border*/
   --dark-button-font-color: var(--cael-text-3, #f9e0da);
-  --dark-background-accent: rgba(34, 23, 20, 0.35); /*--cael-bg-4*/
-  --dark-status-panel: rgba(19, 13, 11, 0.22);
+  --dark-background-accent: rgba(34, 23, 20, 0.5); /*--cael-bg-4*/
+  --dark-status-panel: rgba(19, 13, 11, 0.38);
 
   /*Light mode — Caelestia is dark-only, so these are a warm derivation*/
   --light-bg: transparent;
-  --light-flyout: rgba(250, 240, 234, 0.35);
+  --light-flyout: rgba(250, 240, 234, 0.5);
   --light-accent: #a8503a;
   --light-accent-rgb: 168, 80, 58; /*RGB variant for rgba() composition*/
   --light-accent-hovered: #8a3f2d; /*also disabled button*/
   --light-accent-font-color: var(--cael-text-1, #fae3de);
-  --light-button: rgba(250, 240, 234, 0.38);
+  --light-button: rgba(250, 240, 234, 0.52);
   --light-button-rgb: 250, 240, 234; /*RGB variant for rgba() composition*/
-  --light-button-border: rgba(122, 86, 71, 0.18);
+  --light-button-border: rgba(122, 86, 71, 0.22);
   --light-button-font-color: #3a2219;
-  --light-background-accent: rgba(240, 226, 218, 0.4);
-  --light-status-panel: rgba(250, 240, 234, 0.3);
+  --light-background-accent: rgba(240, 226, 218, 0.55);
+  --light-status-panel: rgba(250, 240, 234, 0.45);
 
-  /* Liquid Glass — reduced blur for subtler effect */
-  --lg-blur-max: 16px; /*Set to 0px to keep the tint + specular edges but drop the blur*/
-  --lg-saturation-max: 140%;
-  --lg-brightness-max: 108%;
+  /* Liquid Glass */
+  --lg-blur-max: 20px; /*Set to 0px to keep the tint + specular edges but drop the blur*/
+  --lg-saturation-max: 150%;
+  --lg-brightness-max: 110%;
 
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */
