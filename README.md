@@ -26,10 +26,16 @@ That's it :D
 ## CaelestiaVOID
 `caelestiavoid.theme.css` is a Liquid Glass theme built on the Discord Mica base. Install it **instead of** `discord-mica.theme.css`, not alongside it. It is a derivative of [Discord Mica](https://github.com/PL7963/Discord-Mica) by Coolkie, which is still provided unmodified as `discord-mica.theme.css`.
 
+Prefer **`caelestiavoid.bundle.theme.css`**: a self-contained version with everything inlined (no remote `@import`). It works offline and is immune to stale deployments or a dead host. Regenerate it after editing the source files with `node scripts/build-bundle.mjs`.
+
+> **About "the colour integration not working":** `caelestiavoid.theme.css` imports `src/caelestiavoid.css` from `https://discord-mica.pages.dev`, which is a Cloudflare Pages site. That site was serving an old snapshot (only `main.css` + README), so the import 404'd and took the Caelestia palette and glass with it. The repo itself has the file. Fixes: use the bundle, or redeploy the Cloudflare site so the remote import resolves. The theme file also has literal fallbacks baked into every `--cael-*` reference, so a failed import now degrades to a fully coloured (glass-less) theme instead of collapsing.
+
 The base window panes stay Mica and the glass is layered onto floating and control surfaces — buttons, popouts, context menus, the composer, inputs, reactions and modals. That is deliberate: **Mica is a matte, tinted material with no transmission, so it cannot refract.** Liquid Glass is faked here with `backdrop-filter: blur() saturate()` plus a specular rim highlight, a light-catching sheen, and soft tinted shadows. The large structural panes (sidebar, message list, member list) are intentionally left as plain Mica — blurring them costs a lot of GPU for no visual gain, and matches the Acrylic advice below.
 
 ### Palette
 CaelestiaVOID carries the **Caelestia** colour scheme over from the Midnight theme (`caelestia.theme.css`) — warm near-black browns with a peach/rust accent ramp. Midnight's own build is not imported, since it is an opaque theme that would kill the Mica transparency. The palette lives as `--cael-*` variables at the top of `src/caelestiavoid.css`, feeds the glass tokens and Discord's native colour variables, and the theme file's `--dark-*`/`--light-*` variables map onto it. Light mode is a warm-neutral derivation, since Caelestia only defines a dark scheme. The background variables stay transparent so Mica keeps showing — if you want the window itself to carry a warm Caelestia wash, set `--dark-bg` to something like `rgba(56, 28, 18, 0.18)`.
+
+Muted text is **high-contrast**: `#84716c` (3.8:1, from the source) is lifted to `#bca9a1` — ~7.5:1 on the theme's backgrounds and still ≥3:1 over a light Mica wallpaper. Text-bearing glass surfaces also carry a subtle `--lg-text-shadow`, so muted labels keep an edge even on bright backdrops.
 
 | Variable | Effect |
 | --- | --- |
