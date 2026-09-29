@@ -131,8 +131,9 @@
 .channelChatWrapper_cb9592, .wrapper_cb9592 /* Voice Chat message panel */ {
   background-color: transparent !important;
   background: transparent !important;
-  -webkit-backdrop-filter: blur(12px) saturate(130%);
-  backdrop-filter: blur(12px) saturate(130%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 
 
@@ -141,12 +142,13 @@
   background-color: var(--channeltextarea-background);
 }
 
-/*Buttons — translucent glass with backdrop blur */
+/*Buttons — clean matte glass, no shadows, reduced saturation */
 .lookFilled__201d5 .colorBrand__201d5 {
-  background-color: color-mix(in srgb, var(--caelestia-primary, #edbe8a) 55%, transparent);
-  color: var(--accent-font);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-  backdrop-filter: blur(8px) saturate(120%);
+  background-color: var(--caelestia-primary, #edbe8a) !important;
+  color: var(--caelestia-onPrimary, #130d0b) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(4px) saturate(105%) !important;
+  backdrop-filter: blur(4px) saturate(105%) !important;
 }
 .lookFilled__201d5 .colorBrand__201d5:hover {
   background-color: var(--accent-hovered);
@@ -155,24 +157,26 @@
   background-color: var(--accent-hovered);
 }
 .lookFilled__201d5 .colorPrimary__201d5, .lookFilled__201d5 .colorPrimary__201d5:disabled {
-  background-color: color-mix(in srgb, var(--caelestia-surfaceContainerHigh, #261e15) 60%, transparent);
-  color: var(--button-font-color);
+  background-color: var(--caelestia-secondary, #dfc1a2) !important;
+  color: var(--caelestia-onSecondary, #503c25) !important;
+  box-shadow: none !important;
   outline: solid var(--button-border) 1.5px;
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(4px) saturate(105%) !important;
+  backdrop-filter: blur(4px) saturate(105%) !important;
 }
 
-/*Toggle — translucent accent */
+/*Toggle — clean matte accent */
 .container__3f21e .checked__3f21e{
-  background-color: color-mix(in srgb, var(--caelestia-primary, #edbe8a) 50%, transparent) !important;
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
-  backdrop-filter: blur(6px) saturate(115%);
+  background-color: var(--caelestia-primary, #edbe8a) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(4px) saturate(105%) !important;
+  backdrop-filter: blur(4px) saturate(105%) !important;
 }
 .container__3f21e .checked__3f21e:hover{
   background-color: var(--accent-hovered) !important;
 }
 
-/*Special Flyout — translucent glass panels with backdrop blur */
+/*Special Flyout — clean matte glass panels */
 .messagesPopoutWrap_e8b59c,
 .container__2692d,
 .container_fc561d,
@@ -189,31 +193,35 @@
 .streamPreview__6da2d,
 .menu_c1e9c4 /* Context menu */ {
   background-color: var(--flyout);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 
-/*Thread — subtle glass tint */
+/*Thread — clean matte glass tint */
 .container__01ae2 {
   background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 7%, transparent);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
-  backdrop-filter: blur(6px) saturate(115%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 
-/*Misc — translucent overlay */
+/*Misc — clean matte overlay */
 .overlayBackground_c69a7b {
   background-color: color-mix(in srgb, var(--caelestia-shadow, #000000) 40%, transparent);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 .resizeHandle__01ae2 {
   width: 0px;
 }
-.container__0f2e8 { /*Server Activity Status — subtle glass */
+.container__0f2e8 { /*Server Activity Status — clean matte glass */
   background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
   outline: solid 1px color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 12%, transparent);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
-  backdrop-filter: blur(6px) saturate(115%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 .scroller_ac6cb0 { /*Global search*/
   border-radius: 5px;
@@ -234,14 +242,15 @@
 .title_c38106, .leading_c38106, .trailing_c38106, .winButtons_c38106 { /* Titlebar */
   display: var(--title-bar-icon);
 }
-.sidebarListRounded__5e434 { /* Subtle sidebar glass — enough to read text, not enough to hide the wallpaper */
-  backdrop-filter: blur(6px) saturate(115%);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
+.sidebarListRounded__5e434 { /* Clean matte sidebar glass */
+  backdrop-filter: blur(8px) saturate(105%);
+  -webkit-backdrop-filter: blur(8px) saturate(105%);
 }
-.panels__5e434, .container__37e49 { /*User Profile — translucent glass */
+.panels__5e434, .container__37e49 { /*User Profile — clean matte glass */
   background: var(--status-panel) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(135%);
-  backdrop-filter: blur(14px) saturate(135%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 .stackedBars__74017 { /* Reply Bar */
   background: transparent;
@@ -252,20 +261,23 @@
 .overlay__8a7fc { /* Discovery header fix */
   top: 0px;
 }
-.outer_bf1984 { /* Activity Card — subtle glass tint */
+.outer_bf1984 { /* Activity Card — clean matte glass tint */
   background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
-  backdrop-filter: blur(6px) saturate(115%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
-.user-profile-sidebar { /* User Profile sidebar — translucent glass */
+.user-profile-sidebar { /* User Profile sidebar — clean matte glass */
   background: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
-.embedFull__623de { /* Embed — subtle glass tint */
+.embedFull__623de { /* Embed — clean matte glass tint */
   background: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
-  backdrop-filter: blur(6px) saturate(115%);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
 }
 
 /*meow*/
@@ -284,4 +296,25 @@ body{
 /* Fix semicolon bug */
 .app_a3002d {
   color: transparent;
+}
+
+/* --- Tooltip fix: rectangular & crisp, no bubble shape --- */
+.tooltip__83fc3,
+.tooltip_a24d26,
+.layer_cd0d36,
+[class*="tooltip"] {
+  border-radius: 4px !important;
+  background-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
+  color: var(--caelestia-onSurface, #ffffff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(4px) saturate(105%) !important;
+  backdrop-filter: blur(4px) saturate(105%) !important;
+}
+
+.tooltipPointer__83fc3,
+[class*="tooltipPointer"] {
+  border-top-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
 }
