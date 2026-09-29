@@ -7,9 +7,9 @@
  * @website https://discord-mica.pages.dev
  */
 
-@import url("https://discord-mica.pages.dev/src/main.css");
-@import url("https://discord-mica.pages.dev/src/caelestia-void.css");
-@import url("file://~/.config/hypr/scheme/current.lua");
+@import url("https://raw.githubusercontent.com/Lhordstarr/Discord-Mica/main/src/main.css");
+@import url("https://raw.githubusercontent.com/Lhordstarr/Discord-Mica/main/src/caelestia-void.css");
+@import url("https://raw.githubusercontent.com/Lhordstarr/Discord-Mica/main/src/caelestia-scheme.css");
 
 :root {
   /* These map onto the Caelestia palette defined in src/caelestia-void.css

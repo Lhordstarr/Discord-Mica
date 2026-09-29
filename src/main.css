@@ -143,7 +143,7 @@
 
 /*Buttons — translucent glass with backdrop blur */
 .lookFilled__201d5 .colorBrand__201d5 {
-  background-color: rgba(246, 152, 125, 0.55);
+  background-color: color-mix(in srgb, var(--caelestia-primary, #edbe8a) 55%, transparent);
   color: var(--accent-font);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
   backdrop-filter: blur(8px) saturate(120%);
@@ -155,7 +155,7 @@
   background-color: var(--accent-hovered);
 }
 .lookFilled__201d5 .colorPrimary__201d5, .lookFilled__201d5 .colorPrimary__201d5:disabled {
-  background-color: rgba(41, 29, 26, 0.4);
+  background-color: color-mix(in srgb, var(--caelestia-surfaceContainerHigh, #261e15) 60%, transparent);
   color: var(--button-font-color);
   outline: solid var(--button-border) 1.5px;
   -webkit-backdrop-filter: blur(8px) saturate(120%);
@@ -164,7 +164,7 @@
 
 /*Toggle — translucent accent */
 .container__3f21e .checked__3f21e{
-  background-color: rgba(246, 152, 125, 0.5) !important;
+  background-color: color-mix(in srgb, var(--caelestia-primary, #edbe8a) 50%, transparent) !important;
   -webkit-backdrop-filter: blur(6px) saturate(115%);
   backdrop-filter: blur(6px) saturate(115%);
 }
@@ -195,14 +195,14 @@
 
 /*Thread — subtle glass tint */
 .container__01ae2 {
-  background-color: rgba(255,255,255,0.05);
+  background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 7%, transparent);
   -webkit-backdrop-filter: blur(6px) saturate(115%);
   backdrop-filter: blur(6px) saturate(115%);
 }
 
 /*Misc — translucent overlay */
 .overlayBackground_c69a7b {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: color-mix(in srgb, var(--caelestia-shadow, #000000) 40%, transparent);
   -webkit-backdrop-filter: blur(10px) saturate(120%);
   backdrop-filter: blur(10px) saturate(120%);
 }
@@ -210,8 +210,8 @@
   width: 0px;
 }
 .container__0f2e8 { /*Server Activity Status — subtle glass */
-  background-color: rgba(255, 255, 255, 0.06);
-  outline: solid 1px rgba(255,255,255,0.1);
+  background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
+  outline: solid 1px color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 12%, transparent);
   -webkit-backdrop-filter: blur(6px) saturate(115%);
   backdrop-filter: blur(6px) saturate(115%);
 }
@@ -253,17 +253,17 @@
   top: 0px;
 }
 .outer_bf1984 { /* Activity Card — subtle glass tint */
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
   -webkit-backdrop-filter: blur(6px) saturate(115%);
   backdrop-filter: blur(6px) saturate(115%);
 }
 .user-profile-sidebar { /* User Profile sidebar — translucent glass */
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
   backdrop-filter: blur(8px) saturate(120%);
 }
 .embedFull__623de { /* Embed — subtle glass tint */
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in srgb, var(--caelestia-onSurface, #f5e2d2) 8%, transparent);
   -webkit-backdrop-filter: blur(6px) saturate(115%);
   backdrop-filter: blur(6px) saturate(115%);
 }
