@@ -591,3 +591,81 @@ input[class*="input"]:focus,
     transition: none;
   }
 }
+
+/* ============================================================
+   17. Clean Matte Glass — removing heavy gloss & shadows
+   ============================================================ */
+
+/* Remove harsh default shadows across popups, cards, and floating elements */
+*,
+.theme-dark,
+.theme-light {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Tone down saturation and blur to eliminate the greasy plastic gloss */
+.app__160d8,
+.bg__960e4,
+.appMount__51fd7,
+.wrapper_ef3116,
+.container__133bf, .tabBody__133bf,
+.chat_f75fb0,
+.chatContent_f75fb0,
+.privateChannels_e6b769, .scroller__99e7c,
+.container__7d20c, .nowPlayingColumn__133bf, .themed__9293f,
+.container__2637a, .sidebar__5e434,
+.panels__5e434, .container__37e49 {
+  background-color: transparent !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
+  backdrop-filter: blur(8px) saturate(105%) !important;
+}
+
+/* --- 18. Dynamic Matte Buttons (using scheme colors) --- */
+
+.lookFilled__201d5 .colorBrand__201d5 {
+  background-color: var(--caelestia-primary, #f6987d) !important;
+  color: var(--caelestia-onPrimary, #130d0b) !important;
+  opacity: 0.85;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.lookFilled__201d5 .colorBrand__201d5:hover {
+  background-color: var(--caelestia-secondary, var(--caelestia-primary)) !important;
+  opacity: 1;
+}
+
+.lookFilled__201d5 .colorPrimary__201d5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: var(--caelestia-onSurface, #ffffff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* --- 19. Tooltip & Bubble Fix (rectangular & crisp) --- */
+
+/* Fix floating explainers/tooltips: remove huge rounded bubble shapes & heavy blur */
+.tooltip__83fc3,
+.tooltip_a24d26,
+.layer_cd0d36,
+[class*="tooltip"] {
+  border-radius: 4px !important; /* Subtle squared corners instead of rounded bubble */
+  background-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
+  color: var(--caelestia-onSurface, #ffffff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Pointer arrow adjustment on tooltips */
+.tooltipPointer__83fc3,
+[class*="tooltipPointer"] {
+  border-top-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
+}
