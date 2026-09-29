@@ -208,14 +208,24 @@
   --border-color: var(--cael-border);
 }
 
-/* Caelestia only defines a dark scheme. Inverting a palette that does not
-   exist would be guesswork, so light mode keeps Discord's defaults for text
-   and only takes warm links; the glass tokens stay warm-tinted. */
+/* Light mode — warm-neutral derivation. Caelestia only defines a dark
+   scheme, so light mode inverts the text colors to dark browns that are
+   readable on a light background. The glass tokens stay warm-tinted. */
 .theme-light {
+  --text-normal: #3a2219;
+  --text-secondary: #5a3a2e;
+  --text-muted: #8a6a5e;
+  --text-subtle: #a08070;
+  --text-heading: #2a1810;
+  --text-description: #6a4a3e;
+  --text-info: #a8503a;
+  --text-brand: #a8503a;
+  --text-success: #4a7a3a;
+  --text-warning: #b87a2a;
+  --text-danger: #c03a2a;
   --text-link: #a8503a;
   --text-link-hover: #8a3f2d;
-  --text-brand: #a8503a;
-  --text-info: #a8503a;
+  --text-code: #a8503a;
 }
 
 /* ============================================================
