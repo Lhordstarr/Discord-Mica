@@ -35,6 +35,27 @@ The base window panes stay Mica and the glass is layered onto floating and contr
 ### Palette
 Discord Caelestia Void carries the **Caelestia** colour scheme over from the Midnight theme (`caelestia.theme.css`) — warm near-black browns with a peach/rust accent ramp. Midnight's own build is not imported, since it is an opaque theme that would kill the Mica transparency. The palette lives as `--cael-*` variables at the top of `src/caelestia-void.css`, feeds the glass tokens and Discord's native colour variables, and the theme file's `--dark-*`/`--light-*` variables map onto it. Light mode is a warm-neutral derivation, since Caelestia only defines a dark scheme. The background variables stay transparent so Mica keeps showing — if you want the window itself to carry a warm Caelestia wash, set `--dark-bg` to something like `rgba(56, 28, 18, 0.18)`.
 
+#### Dynamic Palette
+The theme can automatically follow your desktop wallpaper colors. If `~/.config/hypr/scheme/current.lua` exists and exports a color table, the parsed `--caelestia-*` variables override the static `--cael-*` palette. This means changing your Hyprland wallpaper scheme updates Discord's theme colors automatically.
+
+The Lua file should return a table with color values:
+```lua
+return {
+    bg_1 = "#30231f",
+    bg_2 = "#291d1a",
+    text_3 = "#f9e0da",
+    accent_3 = "#f6987d",
+    -- ... any other colors
+}
+```
+
+The parser (`scripts/parse-scheme.mjs`) converts these to CSS custom properties with the `--caelestia-*` prefix. Every `--cael-*` variable in the theme has a `var(--caelestia-*, fallback)` binding, so the dynamic palette seamlessly overrides the defaults when available.
+
+To manually regenerate the scheme CSS:
+```bash
+node scripts/parse-scheme.mjs --output src/caelestia-scheme.css
+```
+
 Muted text is **high-contrast**: `#84716c` (3.8:1, from the source) is lifted to `#bca9a1` — ~7.5:1 on the theme's backgrounds and still ≥3:1 over a light Mica wallpaper. Text-bearing glass surfaces also carry a subtle `--lg-text-shadow`, so muted labels keep an edge even on bright backdrops.
 
 | Variable | Effect |

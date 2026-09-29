@@ -9,12 +9,18 @@
 
 @import url("https://discord-mica.pages.dev/src/main.css");
 @import url("https://discord-mica.pages.dev/src/caelestia-void.css");
+@import url("file://~/.config/hypr/scheme/current.lua");
 
 :root {
   /* These map onto the Caelestia palette defined in src/caelestia-void.css
      (--cael-*). Every var() has a literal fallback, so the theme stays fully
      coloured even if that import 404s (stale host) — only the glass would be
-     missing. Edit the palette in src/caelestia-void.css, not here. */
+     missing. Edit the palette in src/caelestia-void.css, not here.
+
+     Dynamic palette: if ~/.config/hypr/scheme/current.lua exists and exports
+     a color table, the --caelestia-* variables from the parsed scheme override
+     the base --cael-* palette below. This lets the theme follow the desktop
+     wallpaper automatically. */
 
   /*Dark mode*/
   --dark-bg: transparent; /*keeps Mica visible; try rgba(56, 28, 18, 0.18) for a warm Caelestia wash*/
