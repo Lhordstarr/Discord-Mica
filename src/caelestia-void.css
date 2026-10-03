@@ -171,65 +171,68 @@
    ~7.5:1 on Caelestia's own backgrounds and >=3:1 over a light Mica backdrop.
    It can still wash out over a very bright wallpaper; text-bearing glass
    surfaces additionally carry a subtle text-shadow (--lg-text-shadow). */
+/* Dark mode — seeds per TEXT-COLOUR.md:
+   primary #e9edef (AAA 7:1), secondary #aebac1 (AA 4.5:1), accent #00a884 (AA 4.5:1).
+   Dynamic palette overrides via --caelestia-* when available. */
 .theme-dark {
   color-scheme: dark !important;
-  --text-normal: var(--cael-text-3);
-  --text-secondary: var(--cael-text-3);
-  --text-muted: var(--cael-text-4);
-  --text-subtle: var(--cael-text-5);
-  --text-heading: var(--cael-text-2);
-  --text-description: var(--cael-text-4);
-  --text-info: var(--cael-accent-1);
-  --text-brand: var(--cael-accent-1);
-  --text-success: var(--cael-online);
-  --text-warning: var(--cael-idle);
-  --text-danger: var(--cael-dnd);
-  --text-link: var(--cael-accent-1);
-  --text-link-hover: var(--cael-accent-2);
-  --text-code: var(--cael-accent-1);
+  --text-normal: var(--caelestia-onBackground, var(--caelestia-onSurface, #e9edef));
+  --text-secondary: var(--caelestia-onSurfaceVariant, #aebac1);
+  --text-muted: var(--caelestia-onSurfaceVariant, #aebac1);
+  --text-subtle: var(--caelestia-subtext0, #8a9a9e);
+  --text-heading: var(--caelestia-onBackground, #e9edef);
+  --text-description: var(--caelestia-onSurfaceVariant, #aebac1);
+  --text-info: var(--caelestia-primary, #00a884);
+  --text-brand: var(--caelestia-primary, #00a884);
+  --text-success: var(--caelestia-success, #00a884);
+  --text-warning: var(--caelestia-secondary, #aebac1);
+  --text-danger: var(--caelestia-error, #ff6b6b);
+  --text-link: var(--caelestia-primary, #00a884);
+  --text-link-hover: var(--caelestia-secondary, #00a884);
+  --text-code: var(--caelestia-primary, #00a884);
 
-  --status-online: var(--cael-online);
-  --status-idle: var(--cael-idle);
-  --status-dnd: var(--cael-dnd);
-  --status-offline: var(--cael-text-4);
-  --status-streaming: var(--cael-streaming);
+  --status-online: var(--caelestia-success, #00a884);
+  --status-idle: var(--caelestia-secondary, #aebac1);
+  --status-dnd: var(--caelestia-error, #ff6b6b);
+  --status-offline: var(--caelestia-onSurfaceVariant, #8a9a9e);
+  --status-streaming: var(--caelestia-tertiary, #00a884);
 
   /* main.css derives these from pure white; Caelestia uses warm washes. */
-  --background-modifier-hover: var(--cael-hover);
-  --background-modifier-active: var(--cael-active);
-  --background-modifier-selected: var(--cael-active-2);
-  --background-modifier-accent: var(--cael-active);
+  --background-modifier-hover: var(--caelestia-hover, rgba(233, 237, 239, 0.06));
+  --background-modifier-active: var(--caelestia-active, rgba(233, 237, 239, 0.08));
+  --background-modifier-selected: var(--caelestia-active-2, rgba(233, 237, 239, 0.12));
+  --background-modifier-accent: var(--caelestia-active, rgba(233, 237, 239, 0.08));
 
-  --interactive-hover: var(--cael-hover);
-  --interactive-active: var(--cael-active);
+  --interactive-hover: var(--caelestia-hover, rgba(233, 237, 239, 0.06));
+  --interactive-active: var(--caelestia-active, rgba(233, 237, 239, 0.08));
 
-  --mention-background-color: var(--cael-accent-2);
-  --mention-color: var(--cael-text-0);
-  --mention-background-color-hover: var(--cael-accent-3);
+  --mention-background-color: var(--caelestia-secondary, rgba(0, 168, 132, 0.3));
+  --mention-color: var(--caelestia-onSecondary, #e9edef);
+  --mention-background-color-hover: var(--caelestia-primary, rgba(0, 168, 132, 0.4));
 
-  --divider-color: var(--cael-border);
-  --border-color: var(--cael-border);
+  --divider-color: var(--caelestia-outline, rgba(233, 237, 239, 0.12));
+  --border-color: var(--caelestia-outline, rgba(233, 237, 239, 0.12));
 }
 
-/* Light mode — warm-neutral derivation. Caelestia only defines a dark
-   scheme, so light mode inverts the text colors to dark browns that are
-   readable on a light background. The glass tokens stay warm-tinted. */
+/* Light mode — seeds per TEXT-COLOUR.md:
+   primary #111b21 (AAA 7:1), secondary #667781 (AA 4.5:1), accent #005442 (AA 4.5:1).
+   Dynamic palette overrides via --caelestia-* when available. */
 .theme-light {
   color-scheme: light !important;
-  --text-normal: #3a2219;
-  --text-secondary: #5a3a2e;
-  --text-muted: #8a6a5e;
-  --text-subtle: #a08070;
-  --text-heading: #2a1810;
-  --text-description: #6a4a3e;
-  --text-info: #a8503a;
-  --text-brand: #a8503a;
-  --text-success: #4a7a3a;
-  --text-warning: #b87a2a;
-  --text-danger: #c03a2a;
-  --text-link: #a8503a;
-  --text-link-hover: #8a3f2d;
-  --text-code: #a8503a;
+  --text-normal: var(--caelestia-onBackground, #111b21);
+  --text-secondary: var(--caelestia-onSurfaceVariant, #667781);
+  --text-muted: var(--caelestia-onSurfaceVariant, #667781);
+  --text-subtle: var(--caelestia-subtext0, #8a9a9e);
+  --text-heading: var(--caelestia-onBackground, #111b21);
+  --text-description: var(--caelestia-onSurfaceVariant, #667781);
+  --text-info: var(--caelestia-primary, #005442);
+  --text-brand: var(--caelestia-primary, #005442);
+  --text-success: var(--caelestia-success, #005442);
+  --text-warning: var(--caelestia-secondary, #667781);
+  --text-danger: var(--caelestia-error, #c03a2a);
+  --text-link: var(--caelestia-primary, #005442);
+  --text-link-hover: var(--caelestia-secondary, #005442);
+  --text-code: var(--caelestia-primary, #005442);
 }
 
 /* ============================================================
