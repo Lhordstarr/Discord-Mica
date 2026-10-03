@@ -50,10 +50,13 @@
   --light-background-accent: rgba(240, 226, 218, 0.55);
   --light-status-panel: rgba(250, 240, 234, 0.45);
 
-  /* Liquid Glass */
-  --lg-blur-max: 20px; /*Set to 0px to keep the tint + specular edges but drop the blur*/
+  /* Liquid Glass — alpha values per APPEARANCE.md:
+     dark panelAlpha=0.45, light panelAlpha=0.62 */
+  --lg-blur-max: 20px;
   --lg-saturation-max: 150%;
   --lg-brightness-max: 110%;
+  --lg-panel-alpha: 0.45; /* dark mode panel opacity */
+  --lg-veil-alpha: 0.74; /* dark mode veil opacity */
 
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */

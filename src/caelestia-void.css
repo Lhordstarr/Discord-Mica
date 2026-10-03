@@ -117,14 +117,16 @@
   --lg-brightness-max: 110%;
 }
 
-/* Caelestia only defines a dark scheme, so light mode is a warm-neutral
-   derivation rather than a second full palette — the same browns inverted. */
+/* Light mode — per APPEARANCE.md:
+   panelAlpha=0.62, veilAlpha=0.86 */
 .theme-light {
-  --lg-tint: rgba(252, 244, 240, 0.38);
-  --lg-tint-hover: rgba(252, 241, 236, 0.45);
-  --lg-tint-active: rgba(252, 238, 232, 0.5);
-  --lg-tint-strong: rgba(250, 240, 234, 0.58);
-  --lg-tint-faint: rgba(122, 86, 71, 0.1);
+  --lg-tint: rgba(252, 244, 240, 0.50);
+  --lg-tint-hover: rgba(252, 241, 236, 0.55);
+  --lg-tint-active: rgba(252, 238, 232, 0.60);
+  --lg-tint-strong: rgba(250, 240, 234, 0.62);
+  --lg-tint-faint: rgba(122, 86, 71, 0.12);
+  --lg-panel-alpha: 0.62;
+  --lg-veil-alpha: 0.86;
 
   --lg-edge: rgba(255, 255, 255, 0.5);
   --lg-edge-strong: rgba(255, 255, 255, 0.7);
@@ -170,6 +172,7 @@
    It can still wash out over a very bright wallpaper; text-bearing glass
    surfaces additionally carry a subtle text-shadow (--lg-text-shadow). */
 .theme-dark {
+  color-scheme: dark !important;
   --text-normal: var(--cael-text-3);
   --text-secondary: var(--cael-text-3);
   --text-muted: var(--cael-text-4);
@@ -212,6 +215,7 @@
    scheme, so light mode inverts the text colors to dark browns that are
    readable on a light background. The glass tokens stay warm-tinted. */
 .theme-light {
+  color-scheme: light !important;
   --text-normal: #3a2219;
   --text-secondary: #5a3a2e;
   --text-muted: #8a6a5e;
