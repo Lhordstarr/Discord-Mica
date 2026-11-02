@@ -304,7 +304,7 @@ body{
 .layer_cd0d36,
 [class*="tooltip"] {
   border-radius: 4px !important;
-  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.72)) !important;
+  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 4px 8px !important;
