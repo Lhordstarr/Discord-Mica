@@ -694,6 +694,25 @@ button,
 /* Force default text color to follow the active mode */
 .theme-dark { color: var(--text-default, #ffffff) !important; }
 .theme-light { color: var(--text-default, #000000) !important; }
+body, .appMount__51fd7, .app__160d8 { color: var(--text-default) !important; }
+
+/* Broad glass treatment for any floating layer not already covered */
+.theme-dark [class*="popout"],
+.theme-dark [class*="menu"],
+.theme-dark [class*="modal"],
+.theme-dark [class*="tooltip"],
+.theme-dark [class*="layer"],
+.theme-dark [class*="floating"],
+.theme-light [class*="popout"],
+.theme-light [class*="menu"],
+.theme-light [class*="modal"],
+.theme-light [class*="tooltip"],
+.theme-light [class*="layer"],
+.theme-light [class*="floating"] {
+  background-color: var(--lg-tint) !important;
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturation)) brightness(var(--lg-brightness)) !important;
+  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturation)) brightness(var(--lg-brightness)) !important;
+}
 
 /* Force text + icon colors in channel/category lists and similar surfaces */
 .theme-dark .defaultColor__4bd52,
