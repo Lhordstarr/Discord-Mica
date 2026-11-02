@@ -85,8 +85,8 @@
 
   /* Specular edge — the "lens" rim that catches light. Warm, not pure white,
      so it reads as lit Caelestia glass rather than a grey outline. */
-  --lg-edge: rgba(255, 255, 255, 0.16);
-  --lg-edge-strong: rgba(255, 255, 255, 0.28);
+  --lg-edge: transparent;
+  --lg-edge-strong: transparent;
   --lg-specular-top: transparent;
   --lg-specular-bottom: transparent;
   --lg-sheen: none;
@@ -125,8 +125,8 @@
   --lg-panel-alpha: 0.62;
   --lg-veil-alpha: 0.86;
 
-  --lg-edge: rgba(255, 255, 255, 0.5);
-  --lg-edge-strong: rgba(255, 255, 255, 0.7);
+  --lg-edge: transparent;
+  --lg-edge-strong: transparent;
   --lg-specular-top: transparent;
   --lg-specular-bottom: transparent;
   --lg-sheen: none;
@@ -174,26 +174,26 @@
 .theme-dark {
   color-scheme: dark !important;
   /* Monochrome: white text on dark glass */
-  --text-normal: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.78);
-  --text-muted: rgba(255, 255, 255, 0.62);
-  --text-subtle: rgba(255, 255, 255, 0.45);
-  --text-heading: #ffffff;
-  --text-description: rgba(255, 255, 255, 0.78);
-  --text-info: #ffffff;
-  --text-brand: #ffffff;
-  --text-success: #ffffff;
-  --text-warning: #ffffff;
-  --text-danger: #ff6b6b;
-  --text-link: #ffffff;
-  --text-link-hover: rgba(255, 255, 255, 0.85);
-  --text-code: #ffffff;
+  --text-normal: #ffffff !important;
+  --text-secondary: rgba(255, 255, 255, 0.78) !important;
+  --text-muted: rgba(255, 255, 255, 0.62) !important;
+  --text-subtle: rgba(255, 255, 255, 0.45) !important;
+  --text-heading: #ffffff !important;
+  --text-description: rgba(255, 255, 255, 0.78) !important;
+  --text-info: #ffffff !important;
+  --text-brand: #ffffff !important;
+  --text-success: #ffffff !important;
+  --text-warning: #ffffff !important;
+  --text-danger: #ff6b6b !important;
+  --text-link: #ffffff !important;
+  --text-link-hover: rgba(255, 255, 255, 0.85) !important;
+  --text-code: #ffffff !important;
 
-  --status-online: #ffffff;
-  --status-idle: rgba(255, 255, 255, 0.7);
-  --status-dnd: #ff6b6b;
-  --status-offline: rgba(255, 255, 255, 0.45);
-  --status-streaming: #ffffff;
+  --status-online: #ffffff !important;
+  --status-idle: rgba(255, 255, 255, 0.7) !important;
+  --status-dnd: #ff6b6b !important;
+  --status-offline: rgba(255, 255, 255, 0.45) !important;
+  --status-streaming: #ffffff !important;
 
   --background-modifier-hover: rgba(255, 255, 255, 0.06);
   --background-modifier-active: rgba(255, 255, 255, 0.08);
@@ -217,20 +217,20 @@
 .theme-light {
   color-scheme: light !important;
   /* Monochrome: black text on light glass */
-  --text-normal: #000000;
-  --text-secondary: rgba(0, 0, 0, 0.78);
-  --text-muted: rgba(0, 0, 0, 0.62);
-  --text-subtle: rgba(0, 0, 0, 0.45);
-  --text-heading: #000000;
-  --text-description: rgba(0, 0, 0, 0.78);
-  --text-info: #000000;
-  --text-brand: #000000;
-  --text-success: #000000;
-  --text-warning: #000000;
-  --text-danger: #c03a2a;
-  --text-link: #000000;
-  --text-link-hover: rgba(0, 0, 0, 0.85);
-  --text-code: #000000;
+  --text-normal: #000000 !important;
+  --text-secondary: rgba(0, 0, 0, 0.78) !important;
+  --text-muted: rgba(0, 0, 0, 0.62) !important;
+  --text-subtle: rgba(0, 0, 0, 0.45) !important;
+  --text-heading: #000000 !important;
+  --text-description: rgba(0, 0, 0, 0.78) !important;
+  --text-info: #000000 !important;
+  --text-brand: #000000 !important;
+  --text-success: #000000 !important;
+  --text-warning: #000000 !important;
+  --text-danger: #c03a2a !important;
+  --text-link: #000000 !important;
+  --text-link-hover: rgba(0, 0, 0, 0.85) !important;
+  --text-code: #000000 !important;
 }
 
 /* ============================================================
@@ -659,8 +659,8 @@ input[class*="input"]:focus,
 .layer_cd0d36,
 [class*="tooltip"] {
   border-radius: 4px !important; /* Subtle squared corners instead of rounded bubble */
-  background-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
-  color: var(--caelestia-onSurface, #ffffff) !important;
+  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.72)) !important;
+  color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 4px 8px !important;
   font-size: 12px !important;
@@ -672,5 +672,5 @@ input[class*="input"]:focus,
 /* Pointer arrow adjustment on tooltips */
 .tooltipPointer__83fc3,
 [class*="tooltipPointer"] {
-  border-top-color: var(--caelestia-background, rgba(19, 13, 11, 0.9)) !important;
+  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.72)) !important;
 }
