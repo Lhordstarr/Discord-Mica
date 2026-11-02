@@ -22,33 +22,33 @@
      the base --cael-* palette below. This lets the theme follow the desktop
      wallpaper automatically. */
 
-  /*Dark mode — lightweight tints with alpha channels for liquid glass effect*/
-  --dark-bg: transparent; /*keeps Mica visible; try rgba(56, 28, 18, 0.18) for a warm Caelestia wash*/
-  --dark-flyout: rgba(19, 13, 11, 0.38); /*--cael-bg-3, translucent so the glass has something to blur*/
-  --dark-accent: var(--cael-accent-3, #f6987d);
-  --dark-accent-rgb: 246, 152, 125; /*RGB variant for rgba() composition*/
-  --dark-accent-hovered: var(--cael-accent-4, #f5896a); /*also disabled button*/
-  --dark-accent-font-color: var(--cael-text-0, #613427); /*dark brown on the peach accent*/
-  --dark-button: rgba(41, 29, 26, 0.42); /*--cael-bg-2, translucent for glass*/
-  --dark-button-rgb: 41, 29, 26; /*RGB variant for rgba() composition*/
-  --dark-button-border: rgba(132, 113, 108, 0.2); /*--cael-border*/
-  --dark-button-font-color: var(--cael-text-3, #f9e0da);
-  --dark-background-accent: rgba(34, 23, 20, 0.5); /*--cael-bg-4*/
-  --dark-status-panel: rgba(19, 13, 11, 0.38);
+  /*Dark mode — monochrome frosted glass (no accent colors) */
+  --dark-bg: transparent; /*keeps Mica visible*/
+  --dark-flyout: rgba(20, 20, 24, 0.45); /*translucent so the glass has something to blur*/
+  --dark-accent: #ffffff; /*monochrome: white accent*/
+  --dark-accent-rgb: 255, 255, 255;
+  --dark-accent-hovered: rgba(255, 255, 255, 0.85); /*also disabled button*/
+  --dark-accent-font-color: #000000; /*black text on white accent*/
+  --dark-button: rgba(255, 255, 255, 0.08); /*frosted neutral*/
+  --dark-button-rgb: 255, 255, 255;
+  --dark-button-border: rgba(255, 255, 255, 0.18);
+  --dark-button-font-color: #ffffff;
+  --dark-background-accent: rgba(255, 255, 255, 0.06);
+  --dark-status-panel: rgba(20, 20, 24, 0.45);
 
-  /*Light mode — Caelestia is dark-only, so these are a warm derivation*/
+  /*Light mode — monochrome frosted glass (no accent colors) */
   --light-bg: transparent;
-  --light-flyout: rgba(250, 240, 234, 0.5);
-  --light-accent: #a8503a;
-  --light-accent-rgb: 168, 80, 58; /*RGB variant for rgba() composition*/
-  --light-accent-hovered: #8a3f2d; /*also disabled button*/
-  --light-accent-font-color: var(--cael-text-1, #fae3de);
-  --light-button: rgba(250, 240, 234, 0.52);
-  --light-button-rgb: 250, 240, 234; /*RGB variant for rgba() composition*/
-  --light-button-border: rgba(122, 86, 71, 0.22);
-  --light-button-font-color: #3a2219;
-  --light-background-accent: rgba(240, 226, 218, 0.55);
-  --light-status-panel: rgba(250, 240, 234, 0.45);
+  --light-flyout: rgba(255, 255, 255, 0.55);
+  --light-accent: #000000; /*monochrome: black accent*/
+  --light-accent-rgb: 0, 0, 0;
+  --light-accent-hovered: rgba(0, 0, 0, 0.85); /*also disabled button*/
+  --light-accent-font-color: #ffffff; /*white text on black accent*/
+  --light-button: rgba(0, 0, 0, 0.06);
+  --light-button-rgb: 0, 0, 0;
+  --light-button-border: rgba(0, 0, 0, 0.18);
+  --light-button-font-color: #000000;
+  --light-background-accent: rgba(0, 0, 0, 0.06);
+  --light-status-panel: rgba(255, 255, 255, 0.55);
 
   /* Liquid Glass — alpha values per APPEARANCE.md:
      dark panelAlpha=0.45, light panelAlpha=0.62 */
