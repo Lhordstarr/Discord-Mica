@@ -304,7 +304,7 @@ body{
 .layer_cd0d36,
 [class*="tooltip"] {
   border-radius: 4px !important;
-  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.78)) !important;
+  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.90)) !important;
 <<<<<<< HEAD
   color: #ffffff !important;
 =======
@@ -323,6 +323,6 @@ body{
 <<<<<<< HEAD
   border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.72)) !important;
 =======
-  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.78)) !important;
+  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.90)) !important;
 >>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 }
