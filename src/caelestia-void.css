@@ -175,10 +175,14 @@
   color-scheme: dark !important;
   /* Monochrome: white text on dark glass */
   --text-normal: #ffffff !important;
+  --text-default: #ffffff !important;
+  --text-strong: #ffffff !important;
   --text-secondary: rgba(255, 255, 255, 0.78) !important;
   --text-muted: rgba(255, 255, 255, 0.62) !important;
   --text-subtle: rgba(255, 255, 255, 0.45) !important;
   --text-heading: #ffffff !important;
+  --channels-default: #ffffff !important;
+  --channel-text-area-placeholder: rgba(255, 255, 255, 0.6) !important;
   --text-description: rgba(255, 255, 255, 0.78) !important;
   --text-info: #ffffff !important;
   --text-brand: #ffffff !important;
@@ -218,10 +222,14 @@
   color-scheme: light !important;
   /* Monochrome: black text on light glass */
   --text-normal: #000000 !important;
+  --text-default: #000000 !important;
+  --text-strong: #000000 !important;
   --text-secondary: rgba(0, 0, 0, 0.78) !important;
   --text-muted: rgba(0, 0, 0, 0.62) !important;
   --text-subtle: rgba(0, 0, 0, 0.45) !important;
   --text-heading: #000000 !important;
+  --channels-default: #000000 !important;
+  --channel-text-area-placeholder: rgba(0, 0, 0, 0.6) !important;
   --text-description: rgba(0, 0, 0, 0.78) !important;
   --text-info: #000000 !important;
   --text-brand: #000000 !important;
@@ -678,17 +686,25 @@ input[class*="input"]:focus,
 /* Rounded corners on all buttons (no square blocks) */
 button,
 [class*="button"],
-[class*="btn"] {
+[class*="btn"],
+[data-mana-component="button"] {
   border-radius: var(--lg-radius) !important;
 }
+
+/* Force default text color to follow the active mode */
+.theme-dark { color: var(--text-default, #ffffff) !important; }
+.theme-light { color: var(--text-default, #000000) !important; }
 
 /* Follow OS color scheme as a fallback when Discord's theme classes don't toggle */
 @media (prefers-color-scheme: light) {
   :root {
     --text-normal: #000000 !important;
+    --text-default: #000000 !important;
+    --text-strong: #000000 !important;
     --text-secondary: rgba(0, 0, 0, 0.78) !important;
     --text-muted: rgba(0, 0, 0, 0.62) !important;
     --text-heading: #000000 !important;
+    --channels-default: #000000 !important;
     --dark-button-font-color: #000000;
     --light-button-font-color: #000000;
   }
@@ -696,9 +712,12 @@ button,
 @media (prefers-color-scheme: dark) {
   :root {
     --text-normal: #ffffff !important;
+    --text-default: #ffffff !important;
+    --text-strong: #ffffff !important;
     --text-secondary: rgba(255, 255, 255, 0.78) !important;
     --text-muted: rgba(255, 255, 255, 0.62) !important;
     --text-heading: #ffffff !important;
+    --channels-default: #ffffff !important;
     --dark-button-font-color: #ffffff;
     --light-button-font-color: #ffffff;
   }
