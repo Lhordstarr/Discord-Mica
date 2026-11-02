@@ -78,6 +78,12 @@ function parseLuaTable(lua) {
       value = value.slice(1, -1);
     }
 
+    // Hyprland/Caelestia schemes often omit the leading '#'. CSS hex colors
+    // require it, so add it back when the value is a bare hex string.
+    if (/^[0-9a-fA-F]{3,8}$/.test(value)) {
+      value = `#${value}`;
+    }
+
     result[key] = value;
   }
 

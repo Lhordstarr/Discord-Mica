@@ -603,13 +603,9 @@ input[class*="input"]:focus,
    17. Clean Matte Glass — removing heavy gloss & shadows
    ============================================================ */
 
-/* Remove harsh default shadows across popups, cards, and floating elements */
-*,
-.theme-dark,
-.theme-light {
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
+/* Glass surfaces keep their own shadows (see --lg-shadow*). Do not wipe
+   box-shadow/text-shadow globally — that flattens the specular highlights
+   and text contrast aids the glass relies on. */
 
 /* Tone down saturation and blur to eliminate the greasy plastic gloss */
 .app__160d8,

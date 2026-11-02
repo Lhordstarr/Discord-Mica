@@ -47,6 +47,9 @@ function parseScheme() {
           (value.startsWith("'") && value.endsWith("'"))) {
         value = value.slice(1, -1);
       }
+      if (/^[0-9a-fA-F]{3,8}$/.test(value)) {
+        value = `#${value}`;
+      }
       const cssVarName = `--caelestia-${key.replace(/_/g, "-")}`;
       lines.push(`  ${cssVarName}: ${value};`);
     }
