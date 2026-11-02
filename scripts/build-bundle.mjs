@@ -77,8 +77,7 @@ const header = `/**
  * @author Discord Caelestia Void
  * @version 1.1
  * @description Self-contained Liquid Glass + Caelestia palette for Discord on Mica. No remote imports — works offline.
- * @source https://github.com/Lhordstarr/Discord-Mica (based on Discord Mica by Coolkie)
- * @website https://discord-mica.pages.dev
+ * @description Self-contained Liquid Glass + Caelestia palette for Discord on Mica. No remote imports — works offline.
  */
 
 /* AUTO-GENERATED — do not edit by hand. Regenerate with:
