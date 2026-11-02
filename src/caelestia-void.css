@@ -136,7 +136,7 @@
   --lg-shadow-hover: 0 14px 36px -10px rgba(74, 41, 30, 0.3), 0 2px 8px -2px rgba(74, 41, 30, 0.14);
   --lg-text-shadow: none;
 
-  --lg-blur-max: 18px;
+  --lg-blur-max: 12px;
   --lg-brightness-max: 105%;
 }
 
@@ -173,7 +173,10 @@
    Dynamic palette overrides via --caelestia-* when available. */
 .theme-dark {
   color-scheme: dark !important;
+<<<<<<< HEAD
   /* Monochrome: white text on dark glass */
+=======
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   --text-normal: #ffffff !important;
   --text-default: #ffffff !important;
   --text-strong: #ffffff !important;
@@ -181,8 +184,11 @@
   --text-muted: rgba(255, 255, 255, 0.62) !important;
   --text-subtle: rgba(255, 255, 255, 0.45) !important;
   --text-heading: #ffffff !important;
+<<<<<<< HEAD
   --channels-default: #ffffff !important;
   --channel-text-area-placeholder: rgba(255, 255, 255, 0.6) !important;
+=======
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   --text-description: rgba(255, 255, 255, 0.78) !important;
   --text-info: #ffffff !important;
   --text-brand: #ffffff !important;
@@ -192,6 +198,10 @@
   --text-link: #ffffff !important;
   --text-link-hover: rgba(255, 255, 255, 0.85) !important;
   --text-code: #ffffff !important;
+<<<<<<< HEAD
+=======
+  --channels-default: #ffffff !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 
   --status-online: #ffffff !important;
   --status-idle: rgba(255, 255, 255, 0.7) !important;
@@ -220,7 +230,10 @@
    Dynamic palette overrides via --caelestia-* when available. */
 .theme-light {
   color-scheme: light !important;
+<<<<<<< HEAD
   /* Monochrome: black text on light glass */
+=======
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   --text-normal: #000000 !important;
   --text-default: #000000 !important;
   --text-strong: #000000 !important;
@@ -228,8 +241,11 @@
   --text-muted: rgba(0, 0, 0, 0.62) !important;
   --text-subtle: rgba(0, 0, 0, 0.45) !important;
   --text-heading: #000000 !important;
+<<<<<<< HEAD
   --channels-default: #000000 !important;
   --channel-text-area-placeholder: rgba(0, 0, 0, 0.6) !important;
+=======
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   --text-description: rgba(0, 0, 0, 0.78) !important;
   --text-info: #000000 !important;
   --text-brand: #000000 !important;
@@ -239,6 +255,10 @@
   --text-link: #000000 !important;
   --text-link-hover: rgba(0, 0, 0, 0.85) !important;
   --text-code: #000000 !important;
+<<<<<<< HEAD
+=======
+  --channels-default: #000000 !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 }
 
 /* ============================================================
@@ -609,9 +629,13 @@ input[class*="input"]:focus,
    17. Clean Matte Glass — removing heavy gloss & shadows
    ============================================================ */
 
+<<<<<<< HEAD
 /* Glass surfaces keep their own shadows (see --lg-shadow*). Do not wipe
    box-shadow/text-shadow globally — that flattens the specular highlights
    and text contrast aids the glass relies on. */
+=======
+/* Keep glass shadows; do not wipe them globally. */
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 
 /* Tone down saturation and blur to eliminate the greasy plastic gloss */
 .app__160d8,
@@ -627,15 +651,20 @@ input[class*="input"]:focus,
 .panels__5e434, .container__37e49 {
   background-color: transparent !important;
   background: transparent !important;
-  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
-  backdrop-filter: blur(8px) saturate(105%) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
 /* --- 18. Frosted glass buttons (no accent colors) --- */
 
 .lookFilled__201d5 .colorBrand__201d5 {
+<<<<<<< HEAD
   background-color: var(--accent) !important;
   color: var(--accent-font) !important;
+=======
+  background-color: var(--accent, #ffffff) !important;
+  color: var(--accent-font, #000000) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   opacity: 0.9;
   border: 1px solid var(--button-border) !important;
   -webkit-backdrop-filter: blur(4px) !important;
@@ -645,13 +674,22 @@ input[class*="input"]:focus,
 }
 
 .lookFilled__201d5 .colorBrand__201d5:hover {
+<<<<<<< HEAD
   background-color: var(--accent-hovered) !important;
+=======
+  background-color: var(--accent-hovered, rgba(255,255,255,0.85)) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   opacity: 1;
 }
 
 .lookFilled__201d5 .colorPrimary__201d5 {
+<<<<<<< HEAD
   background-color: var(--button) !important;
   color: var(--button-font-color) !important;
+=======
+  background-color: var(--button, rgba(255,255,255,0.08)) !important;
+  color: var(--button-font-color, #ffffff) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   border: 1px solid var(--button-border) !important;
   -webkit-backdrop-filter: blur(4px) !important;
   backdrop-filter: blur(4px) !important;
@@ -668,7 +706,11 @@ input[class*="input"]:focus,
 [class*="tooltip"] {
   border-radius: 4px !important; /* Subtle squared corners instead of rounded bubble */
   background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
+<<<<<<< HEAD
   color: #ffffff !important;
+=======
+  color: var(--text-default, #ffffff) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 4px 8px !important;
   font-size: 12px !important;
@@ -694,6 +736,7 @@ button,
 /* Force default text color to follow the active mode */
 .theme-dark { color: var(--text-default, #ffffff) !important; }
 .theme-light { color: var(--text-default, #000000) !important; }
+<<<<<<< HEAD
 body, .appMount__51fd7, .app__160d8 { color: var(--text-default) !important; }
 
 /* (Removed broad floating-layer override — it was matching structural
@@ -701,6 +744,10 @@ body, .appMount__51fd7, .app__160d8 { color: var(--text-default) !important; }
    recipes in section 5 already cover popouts/menus/modals/tooltips.) */
 
 /* Force text + icon colors in channel/category lists and similar surfaces */
+=======
+
+/* Force text + icon colors in channel/category lists */
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 .theme-dark .defaultColor__4bd52,
 .theme-dark .defaultColor__5345c,
 .theme-dark [class*="name__"],
@@ -717,8 +764,11 @@ body, .appMount__51fd7, .app__160d8 { color: var(--text-default) !important; }
 .theme-light [class*="text-sm"] {
   color: var(--text-default, #000000) !important;
 }
+<<<<<<< HEAD
 
 /* Icons inherit text color where Discord uses currentColor */
+=======
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 .theme-dark svg[class*="icon"] { fill: var(--text-default, #ffffff) !important; }
 .theme-light svg[class*="icon"] { fill: var(--text-default, #000000) !important; }
 

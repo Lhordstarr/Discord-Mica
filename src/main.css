@@ -132,8 +132,8 @@
   background-color: transparent !important;
   background: transparent !important;
   box-shadow: none !important;
-  -webkit-backdrop-filter: blur(8px) saturate(105%) !important;
-  backdrop-filter: blur(8px) saturate(105%) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
 
@@ -305,7 +305,11 @@ body{
 [class*="tooltip"] {
   border-radius: 4px !important;
   background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
+<<<<<<< HEAD
   color: #ffffff !important;
+=======
+  color: var(--text-default, #ffffff) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 4px 8px !important;
   font-size: 12px !important;
@@ -316,5 +320,9 @@ body{
 
 .tooltipPointer__83fc3,
 [class*="tooltipPointer"] {
+<<<<<<< HEAD
   border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.72)) !important;
+=======
+  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
+>>>>>>> 990f589 (Enhance color handling and styling in Caelestia theme)
 }
