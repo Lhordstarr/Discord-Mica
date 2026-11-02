@@ -77,10 +77,10 @@
   --lg-brightness: 100%;
 
   /* Glass tint — neutral frosted glass, no color accent. */
-  --lg-tint: rgba(20, 20, 24, 0.32);
-  --lg-tint-hover: rgba(20, 20, 24, 0.40);
-  --lg-tint-active: rgba(20, 20, 24, 0.48);
-  --lg-tint-strong: rgba(20, 20, 24, 0.60);
+  --lg-tint: rgba(20, 20, 24, 0.45);
+  --lg-tint-hover: rgba(20, 20, 24, 0.52);
+  --lg-tint-active: rgba(20, 20, 24, 0.60);
+  --lg-tint-strong: rgba(20, 20, 24, 0.78);
   --lg-tint-faint: rgba(255, 255, 255, 0.06);
 
   /* Specular edge — the "lens" rim that catches light. Warm, not pure white,
@@ -117,10 +117,10 @@
 /* Light mode — per APPEARANCE.md:
    panelAlpha=0.62, veilAlpha=0.86 */
 .theme-light {
-  --lg-tint: rgba(255, 255, 255, 0.45);
-  --lg-tint-hover: rgba(255, 255, 255, 0.52);
-  --lg-tint-active: rgba(255, 255, 255, 0.60);
-  --lg-tint-strong: rgba(255, 255, 255, 0.70);
+  --lg-tint: rgba(255, 255, 255, 0.55);
+  --lg-tint-hover: rgba(255, 255, 255, 0.62);
+  --lg-tint-active: rgba(255, 255, 255, 0.70);
+  --lg-tint-strong: rgba(255, 255, 255, 0.85);
   --lg-tint-faint: rgba(0, 0, 0, 0.06);
   --lg-panel-alpha: 0.62;
   --lg-veil-alpha: 0.86;
@@ -705,7 +705,7 @@ input[class*="input"]:focus,
 .layer_cd0d36,
 [class*="tooltip"] {
   border-radius: 4px !important; /* Subtle squared corners instead of rounded bubble */
-  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
+  background-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.78)) !important;
 <<<<<<< HEAD
   color: #ffffff !important;
 =======
@@ -722,7 +722,7 @@ input[class*="input"]:focus,
 /* Pointer arrow adjustment on tooltips */
 .tooltipPointer__83fc3,
 [class*="tooltipPointer"] {
-  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.60)) !important;
+  border-top-color: var(--lg-tint-strong, rgba(20, 20, 24, 0.78)) !important;
 }
 
 /* Rounded corners on all buttons (no square blocks) */
