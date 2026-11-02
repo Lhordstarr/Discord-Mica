@@ -695,6 +695,28 @@ button,
 .theme-dark { color: var(--text-default, #ffffff) !important; }
 .theme-light { color: var(--text-default, #000000) !important; }
 
+/* Force text + icon colors in channel/category lists and similar surfaces */
+.theme-dark .defaultColor__4bd52,
+.theme-dark .defaultColor__5345c,
+.theme-dark [class*="name__"],
+.theme-dark [class*="text-md"],
+.theme-dark [class*="text-xs"],
+.theme-dark [class*="text-sm"] {
+  color: var(--text-default, #ffffff) !important;
+}
+.theme-light .defaultColor__4bd52,
+.theme-light .defaultColor__5345c,
+.theme-light [class*="name__"],
+.theme-light [class*="text-md"],
+.theme-light [class*="text-xs"],
+.theme-light [class*="text-sm"] {
+  color: var(--text-default, #000000) !important;
+}
+
+/* Icons inherit text color where Discord uses currentColor */
+.theme-dark svg[class*="icon"] { fill: var(--text-default, #ffffff) !important; }
+.theme-light svg[class*="icon"] { fill: var(--text-default, #000000) !important; }
+
 /* Follow OS color scheme as a fallback when Discord's theme classes don't toggle */
 @media (prefers-color-scheme: light) {
   :root {
