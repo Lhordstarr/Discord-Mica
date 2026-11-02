@@ -68,9 +68,9 @@
   --light-status-panel: rgba(255, 255, 255, 0.55);
 
   /* Liquid Glass — performance-tuned (lower blur) */
-  --lg-blur-max: 12px;
-  --lg-saturation-max: 130%;
-  --lg-brightness-max: 108%;
+  --lg-blur-max: 8px;
+  --lg-saturation-max: 120%;
+  --lg-brightness-max: 106%;
   --lg-panel-alpha: 0.45;
   --lg-veil-alpha: 0.74;
 

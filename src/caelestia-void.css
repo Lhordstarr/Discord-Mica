@@ -109,9 +109,9 @@
 
   /* Set to 0px to keep the specular/tint look but drop the blur entirely
      (useful on low-end GPUs, or if BetterDiscord transparency is enabled). */
-  --lg-blur-max: 20px;
-  --lg-saturation-max: 150%;
-  --lg-brightness-max: 110%;
+  --lg-blur-max: 8px;
+  --lg-saturation-max: 120%;
+  --lg-brightness-max: 106%;
 }
 
 /* Light mode — per APPEARANCE.md:
@@ -136,7 +136,7 @@
   --lg-shadow-hover: 0 14px 36px -10px rgba(74, 41, 30, 0.3), 0 2px 8px -2px rgba(74, 41, 30, 0.14);
   --lg-text-shadow: none;
 
-  --lg-blur-max: 12px;
+  --lg-blur-max: 8px;
   --lg-brightness-max: 105%;
 }
 
